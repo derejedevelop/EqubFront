@@ -1,0 +1,23 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+    <br><br>
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+    <br><br>
+    <label for="user-name">User Name: </label>
+    <input id="user-name" type="text" formControlName="userName">
+    <br><br>
+    <label for="phone-number">Phone Number: </label>
+    <input id="phone-number" type="text" formControlName="phoneNumber">
+    <br><br>
+    <label for="emailValue">Email: </label>
+    <input id="emailValue" type="text" formControlName="email">
+    <br><br>
+    <label for="passwordValue">Password: </label>
+    <input id="passwordValue" type="text" formControlName="password">
+    <br><br>
+    <button type="sumbit" [disabled]="!userForm.valid">Sumbit</button>
+</form>
+
+<p>Form Status: {{ userForm.value }}</p>
